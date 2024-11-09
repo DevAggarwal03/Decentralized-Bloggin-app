@@ -3,12 +3,12 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { Network } from "aptos";
 import { Aptos, AptosConfig, InputViewFunctionData } from "@aptos-labs/ts-sdk";
 import PostCard from "../Components/PostCard";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const GetPosts = () => {
     const navigate = useNavigate();
     const { account, connected } = useWallet()
-    const [responseData, setResponseData] = useState<any>();
+    const [, setResponseData] = useState<any>();
     const [accAddresses, setAccAddresses] = useState<any>(); 
     const [titles, setTitles] = useState<any>();
     const [descriptions, setDescriptions] = useState<any>();
@@ -67,7 +67,7 @@ const GetPosts = () => {
                     (
                         <div className="flex flex-col gap-y-3">
                         {
-                            accAddresses?.map((data:any, index:any) => {
+                            accAddresses?.map((index:any) => {
                                 return(
                                     
                                         <PostCard length={accAddresses.length} key={index} index={index} accAddresses={accAddresses} titles={titles} descriptions={descriptions} postedDates={postedDate}/>
