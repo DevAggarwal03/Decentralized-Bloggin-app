@@ -15,8 +15,8 @@ const PostCard = ({length, index, accAddresses, titles, descriptions, postedDate
         const istDate = new Date(date.getTime() + istOffset);
 
         // Format and display the date and time
-        setDate(istDate.toISOString().replace('T', ' ').slice(0, 19));
-        console.log(istDate.toISOString().replace('T', ' ').slice(0, 19));
+        setDate(istDate?.toISOString().replace('T', ' ').slice(0, 19));
+        console.log(istDate?.toISOString().replace('T', ' ').slice(0, 19));
 
     }
     useEffect(() => {
@@ -34,7 +34,7 @@ const PostCard = ({length, index, accAddresses, titles, descriptions, postedDate
                 <div className="text-xl font-bold">{titles[length-index-1]}</div>
                 <div className='max-w-[500px]'>{descriptions[length-index-1]}</div>
             </div>
-            <div className='place-self-end'>{date}</div>
+            <div className='place-self-end'>{date | postedDates[length-index-1]}</div>
         </div>
     </div> );
 }
