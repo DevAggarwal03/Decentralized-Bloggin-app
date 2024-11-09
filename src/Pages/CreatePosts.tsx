@@ -74,11 +74,11 @@ const CreatePosts = () => {
                 <div className="flex flex-col gap-y-5">
                     <label className="flex gap-y-1 text-2xl text-white font-serif font-bold flex-col">
                         Title
-                        <input onChange={changeHandler} name="title" type="text" id="title" className="rounded-md p-1 text-lg" placeholder="How to create a Dapp?"/>
+                        <input onChange={changeHandler} name="title" type="text" id="title" className="rounded-md p-1 text-black text-lg" placeholder="How to create a Dapp?"/>
                     </label>
                     <label className="flex gap-y-1 text-2xl text-white font-serif font-bold flex-col">
                         Description
-                        <input onChange={changeHandler} name="description" type="text" id="description" className="rounded-md p-1 text-lg" placeholder="Make a contract in move...?"/>
+                        <input onChange={changeHandler} name="description" type="text" id="description" className="rounded-md text-black p-1 text-lg" placeholder="Make a contract in move...?"/>
                     </label> 
                 </div>
                 <button onClick={submitHandeler} className="px-3 py-1 text-xl bg-black text-white rounded-lg font-bold hover:opacity-70 active:opacity-100">

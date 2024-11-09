@@ -67,9 +67,9 @@ const GetPosts = () => {
                     (
                         <div className="flex flex-col gap-y-3">
                         {
-                            accAddresses?.map((index:any) => {
+                            accAddresses?.map((data:any, index:any) => {
+                                    console.log(data)
                                 return(
-                                    
                                         <PostCard length={accAddresses.length} key={index} index={index} accAddresses={accAddresses} titles={titles} descriptions={descriptions} postedDates={postedDate}/>
                                 )
                             })

@@ -8,15 +8,17 @@ const PostCard = ({length, index, accAddresses, titles, descriptions, postedDate
         // Given Unix timestamp
 
         // Convert timestamp to milliseconds and create a Date object
-        const date = new Date(postedDates[index] * 1000);
+        const date = new Date(postedDates[length - index - 1] * 1000);
 
         // Convert to IST (UTC + 5:30)
         const istOffset = 5.5 * 60 * 60 * 1000; // IST offset in milliseconds
         const istDate = new Date(date.getTime() + istOffset);
 
         // Format and display the date and time
-        setDate(istDate?.toISOString().replace('T', ' ').slice(0, 19));
-        console.log(istDate?.toISOString().replace('T', ' ').slice(0, 19));
+        // setDate(istDate);
+        setDate(istDate.toISOString().replace('T', ' ').slice(0, 19));
+        console.log(istDate.toISOString().replace('T', ' ').slice(0, 19));
+        // console.log(istDate);
 
     }
     useEffect(() => {
@@ -34,7 +36,7 @@ const PostCard = ({length, index, accAddresses, titles, descriptions, postedDate
                 <div className="text-xl font-bold">{titles[length-index-1]}</div>
                 <div className='max-w-[500px]'>{descriptions[length-index-1]}</div>
             </div>
-            <div className='place-self-end'>{date | postedDates[length-index-1]}</div>
+            <div className='place-self-end'>{date}</div>
         </div>
     </div> );
 }
