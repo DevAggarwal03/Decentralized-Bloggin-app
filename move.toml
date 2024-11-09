@@ -1,0 +1,10 @@
+# [package]
+# name = "decentralized_reddit"
+# version = "1.0.0"
+# authors = ["Dev Aggarwal"]
+
+# [addresses]
+# decentralized_reddit = "0xfe7c2f5d4eac6747b2c3ecce0a3044ee1ddd12fc47b893f9f359690f288307c1"
+
+# [dependencies]
+# AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "main" }
