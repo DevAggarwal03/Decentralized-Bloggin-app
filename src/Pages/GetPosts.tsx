@@ -86,7 +86,12 @@ const GetPosts = () => {
             )
             
         }
-        <button onClick={clickHandeler} className="absolute right-0 bg-[#D9D9D9] px-3 py-1 text-2xl font-bold font-serif rounded-lg">Create post</button>
+        <button
+                    onClick={clickHandeler}
+                    className="absolute right-0 bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center space-x-2 border border-gray-700 shadow-lg"
+                >
+                    <span>Create Posts</span>
+                </button>
         </div>
     </div>
      );

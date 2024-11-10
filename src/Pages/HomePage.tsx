@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 
 const HomePage = () => {
     return ( 
-        <div className="w-full bg-[#212121]">
+        <div className="w-full bg-gray-900">
         <Navbar/>
         <Outlet/>
         </div>
