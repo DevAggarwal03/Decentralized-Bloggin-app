@@ -9,7 +9,7 @@ const Home = () => {
     const toGetPosts = () => {
         navigate('/getPosts')
     }
-    return ( <div className="w-full bg-[#212121] min-h-[85.9vh] flex flex-col gap-y-5 items-center">
+    return ( <div className="w-full bg-[#212121] min-h-screen flex flex-col gap-y-5 items-center">
         <div className='flex w-full justify-center items-center rounded-lg py-10'>
             <img src={image} alt="ByteBoard rounded-xl"/>
         </div>

@@ -35,11 +35,12 @@ const GetPosts = () => {
         const aptosConfig = new AptosConfig({ network: Network.TESTNET });
         const aptos = new Aptos(aptosConfig);
 
-        const moduleAddress = "0xfe7c2f5d4eac6747b2c3ecce0a3044ee1ddd12fc47b893f9f359690f288307c1";
+        const moduleAddress = "0xd43ab96be69d13f3e4e8519ba38cb17f413e2fa71d838a7708da68e74668793e";
+        const globalStore = "0xa82603d9dd3843d9e460c7cdfb787b5d73f82fdd5c2c667914c6dc10f4f92e69";
         const moduleName = "reddit";
         const payload: InputViewFunctionData = {
             function: `${moduleAddress}::${moduleName}::get_all_posts`,
-            functionArguments : [account?.address]
+            functionArguments : [globalStore, globalStore]
         };
         
         const response = await aptos.view({ payload });
