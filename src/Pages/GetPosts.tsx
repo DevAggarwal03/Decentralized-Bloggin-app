@@ -55,16 +55,22 @@ const GetPosts = () => {
     }
 
     return ( 
-    <div className="w-full flex justify-center min-h-screen py-7">
+    <div className="w-full flex justify-center py-7">
         <div className="flex relative flex-col w-10/12 gap-y-4">
         <div className="text-3xl text-center font-sans min-h-[50px] font-bold text-white">
             All posts
         </div>
         {
             connected ? (
-                <div className="flex flex-col justify-center items-center gap-y-3">
+                <div className="flex flex-col justify-center min-h-[50vh] items-center gap-y-3">
                 {
-                    loading ? (<div className="text-3xl text-white font-bold">Loading...</div>) :
+                    loading ? (<div className="spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>) :
                     (
                         <div className="flex flex-col gap-y-3">
                         {
@@ -80,8 +86,8 @@ const GetPosts = () => {
                 }
             </div>
             ) : (
-                <div className="w-full justify-center items-center flex">
-                <div className="text-3xl text-white font-bold">Wallet Not connected</div>
+                <div className="w-full min-h-[50vh] justify-center items-center flex">
+                    <div className="text-3xl text-white font-bold">Wallet Not connected</div>
                 </div>
             )
             
