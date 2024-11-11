@@ -29,7 +29,7 @@ To set up the project locally, follow these steps:
     yarn dev
    ```
 
-4. Open your browser and navigate to `http://localhost:3000` to access the ByteBoard platform.
+4. Open your browser and navigate to `http://localhost:5173` to access the ByteBoard platform.
 
 ## Links
 
